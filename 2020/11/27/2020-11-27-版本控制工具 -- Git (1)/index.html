@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Git笔记(1) -- Git简介 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="Git笔记(1) – Git简介前言git 是很常用的版本控制系统。做过团队项目的人应该对它不陌生。
+前段时间有在学git。这里就是第一篇git笔记。
+Git是什么？Git是一个开源的分布式版本控制,"> 
+    <meta name="author" content="Xin Shang"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Git笔记(1) -- Git简介</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/工具"><b>「
+                    </b>工具<b> 」</b></a>
+                
+                November 27, 2020
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/11/27/2020-11-27-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%20--%20Git%20(1)/" title="Git笔记(1) -- Git简介" class="">Git笔记(1) -- Git简介</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    3.9k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    4 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6-Git/" rel="tag">版本控制 - Git</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="Git笔记-1-–-Git简介"><a href="#Git笔记-1-–-Git简介" class="headerlink" title="Git笔记(1) – Git简介"></a>Git笔记(1) – Git简介</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>git 是很常用的版本控制系统。做过团队项目的人应该对它不陌生。</p>
+<p>前段时间有在学git。这里就是第一篇git笔记。</p>
+<h2 id="Git是什么？"><a href="#Git是什么？" class="headerlink" title="Git是什么？"></a>Git是什么？</h2><p>Git是一个开源的分布式版本控制系统，初始目的是为了更好的管理__Linux内核__。</p>
+<p>后来git内核日渐成熟，已经可以独立地用作版本控制。</p>
+<p>与git相似的版本控制系统还有SVN。</p>
+<h2 id="Git与SVN"><a href="#Git与SVN" class="headerlink" title="Git与SVN"></a>Git与SVN</h2><p>Git 不仅仅是个版本控制系统，它也是个内容管理系统(CMS)，工作管理系统等。</p>
+<p>如果你是一个具有使用 SVN 背景的人，你需要做一定的思想转换，来适应 Git 提供的一些概念和特征。</p>
+<p>Git 与 SVN 区别点：</p>
+<ul>
+<li><p><strong>1、Git 是分布式的，SVN 不是</strong>：</p>
+<p>这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。</p>
+</li>
+<li><p><strong>2、Git 把内容按元数据方式存储，而 SVN 是按文件：</strong></p>
+<p>所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。</p>
+</li>
+<li><p><strong>3、Git 分支和 SVN 的分支不同：</strong></p>
+<p>分支在 SVN 中一点都不特别，其实它就是版本库中的另外一个目录。</p>
+</li>
+<li><p><strong>4、Git 没有一个全局的版本号，而 SVN 有：</strong></p>
+<p>目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。</p>
+</li>
+<li><p><strong>5、Git 的内容完整性要优于 SVN：</strong></p>
+<p>Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。</p>
+</li>
+</ul>
+<h2 id="下载Git"><a href="#下载Git" class="headerlink" title="下载Git"></a>下载Git</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git的下载地址</a></p>
+<h2 id="Git库目录"><a href="#Git库目录" class="headerlink" title="Git库目录"></a>Git库目录</h2><p>库目录：</p>
+<ul>
+<li><p>hooks：存储钩子的文件夹</p>
+</li>
+<li><p>logs：存储日志的文件夹</p>
+</li>
+<li><p>refs：存储指向各个分支的指针（SHA-1标识）文件</p>
+</li>
+<li><p>objects：存放git对象</p>
+</li>
+<li><p>config：存放各种设置文档</p>
+</li>
+<li><p>HEAD：指向当前所在分支的指针文件路径，一般指向refs下的某文件</p>
+</li>
+</ul>
+<h2 id="最常用的Git命令"><a href="#最常用的Git命令" class="headerlink" title="最常用的Git命令"></a>最常用的Git命令</h2><ul>
+<li>创建新文件夹，打开</li>
+</ul>
+<ul>
+<li><p>创建新的git仓库</p>
+<pre><code class="bash">git init
+</code></pre>
+</li>
+<li><p>从远端服务器上克隆项目到本地（如果你的团队成员已经构建好框架）</p>
+<pre><code class="bash">git clone &lt;服务器地址&gt;
+</code></pre>
+</li>
+<li><p>这时就可以编写代码了，当阶段性代码完成时进入下一步</p>
+</li>
+</ul>
+<ul>
+<li><p>更改代码（将代码加到暂存区）</p>
+<pre><code class="bash">git add .
+</code></pre>
+</li>
+<li><p>提交代码到本地库</p>
+<pre><code class="bash">git commit -m &quot;提交信息&quot;
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>提交代码到远程仓库（远端服务器）</p>
+<p>如果你是clone代码到本地修改后，上传：</p>
+<pre><code class="bash">git push origin &lt;分支名&gt;
+</code></pre>
+<p>如果是自己写代码，第一次向远程仓库上传</p>
+<pre><code class="bash">git remote add origin &lt;服务器地址&gt;
+</code></pre>
+</li>
+<li><p>分支</p>
+<pre><code class="bash">// 创建分支_两种方法
+git branch &lt;新分支的名字&gt;
+git checkout -b &lt;新分支的名字&gt;
+
+//查看分支
+git branch
+
+// 切换分支
+git checkout &lt;分支名&gt;
+
+// 删除分支
+git branch -d &lt;分支名&gt;
+
+// 将分支推送到远程
+git push origin &lt;分支名&gt;
+</code></pre>
+</li>
+<li><p>拉取 &amp; 合并</p>
+<pre><code class="bash">// 拉取远程某分支内容
+// 小组中每人每天都在写新内容并上传到远程仓库，所以你需要把它从远程拉取到本地
+git pull origin &lt;分支名&gt;
+
+// 把某分支合并到当前分支
+// 不同分支的代码会有互补和冲突，需要用这行代码进行检验
+git merge &lt;（某）分支名&gt;
+
+// 合并后，上传前不要忘了要add
+git add .
+
+// 在合并改动之前，你可以使用下行代码预览差异
+git diff &lt;源分支&gt; &lt;目标分支&gt;
+</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>更换本地改动</p>
+<pre><code class="bash">// 当操作失误时，可用这行代码替换掉本地改动
+git checkout &lt;文件名&gt;
+
+// 假如你想丢弃你在本地的所有改动与提交
+// 可以到服务器上获取最新的版本历史，并将你本地主分支指向它
+git fetch origin
+git reset --hard origin/master
+</code></pre>
+</li>
+<li><p>其他</p>
+<pre><code class="bash">// 内建的图形化git
+gitk
+
+// 彩色的git输出
+git config color.ui true
+
+// 显示提交记录
+git log             //完整记录
+git log --oneline    //简易记录
+
+// 交互式添加文件到暂存区
+git add -i
+</code></pre>
+</li>
+</ul>
+<h2 id="引用和附赠链接"><a href="#引用和附赠链接" class="headerlink" title="引用和附赠链接"></a>引用和附赠链接</h2><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Git"><font size=4 ><strong>参考wikipedia</strong></font></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-tutorial.html"><font size=4 ><strong>参考菜鸟教程</strong></font></a></p>
+<p><a target="_blank" rel="noopener" href="http://git-scm.com/docs"><font size=4 ><strong>Git 完整命令手册</strong></font></a></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='TriDiamond'
+        data-a='TriDiamond'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Xin Shang</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        <dd><a href="https://github.com/xin-shang" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">8 <p>Articles</p></a></li>
+                    <li><a href="/categories">2 <p>Categories</p></a></li>
+                    <li><a href="/tags">3 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git%E7%AC%94%E8%AE%B0-1-%E2%80%93-Git%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">Git笔记(1) – Git简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">Git是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E4%B8%8ESVN"><span class="toc-number">1.3.</span> <span class="toc-text">Git与SVN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDGit"><span class="toc-number">1.4.</span> <span class="toc-text">下载Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E5%BA%93%E7%9B%AE%E5%BD%95"><span class="toc-number">1.5.</span> <span class="toc-text">Git库目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84Git%E5%91%BD%E4%BB%A4"><span class="toc-number">1.6.</span> <span class="toc-text">最常用的Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%92%8C%E9%99%84%E8%B5%A0%E9%93%BE%E6%8E%A5"><span class="toc-number">1.7.</span> <span class="toc-text">引用和附赠链接</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2021
+        <span class="gradient-text">
+            Xin Shang
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.4" target="_blank" rel="noopener">v1.4.4</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149874671-1');
+</script>
+ 
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+</html>
