@@ -13,7 +13,7 @@
     <meta name="description" content="Git笔记(1) – Git简介前言git 是很常用的版本控制系统。做过团队项目的人应该对它不陌生。
 前段时间有在学git。这里就是第一篇git笔记。
 Git是什么？Git是一个开源的分布式版本控制,"> 
-    <meta name="author" content="Xin Shang"> 
+    <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@ Git是什么？Git是一个开源的分布式版本控制,">
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body class="loading">
@@ -101,7 +101,7 @@ Git是什么？Git是一个开源的分布式版本控制,">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    3.9k
+                    4k
                 </span>
                 
                 
@@ -153,15 +153,23 @@ Git是什么？Git是一个开源的分布式版本控制,">
 <li><p><strong>1、Git 是分布式的，SVN 不是</strong>：</p>
 <p>这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。</p>
 </li>
+</ul>
+<ul>
 <li><p><strong>2、Git 把内容按元数据方式存储，而 SVN 是按文件：</strong></p>
 <p>所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。</p>
 </li>
+</ul>
+<ul>
 <li><p><strong>3、Git 分支和 SVN 的分支不同：</strong></p>
 <p>分支在 SVN 中一点都不特别，其实它就是版本库中的另外一个目录。</p>
 </li>
+</ul>
+<ul>
 <li><p><strong>4、Git 没有一个全局的版本号，而 SVN 有：</strong></p>
 <p>目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。</p>
 </li>
+</ul>
+<ul>
 <li><p><strong>5、Git 的内容完整性要优于 SVN：</strong></p>
 <p>Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。</p>
 </li>
@@ -187,35 +195,35 @@ Git是什么？Git是一个开源的分布式版本控制,">
 </ul>
 <ul>
 <li><p>创建新的git仓库</p>
-<pre><code class="bash">git init
-</code></pre>
+<pre><code class="bash">git init</code></pre>
 </li>
+</ul>
+<ul>
 <li><p>从远端服务器上克隆项目到本地（如果你的团队成员已经构建好框架）</p>
-<pre><code class="bash">git clone &lt;服务器地址&gt;
-</code></pre>
+<pre><code class="bash">git clone &lt;服务器地址&gt;</code></pre>
 </li>
-<li><p>这时就可以编写代码了，当阶段性代码完成时进入下一步</p>
-</li>
+</ul>
+<ul>
+<li>这时就可以编写代码了，当阶段性代码完成时进入下一步</li>
 </ul>
 <ul>
 <li><p>更改代码（将代码加到暂存区）</p>
-<pre><code class="bash">git add .
-</code></pre>
-</li>
-<li><p>提交代码到本地库</p>
-<pre><code class="bash">git commit -m &quot;提交信息&quot;
-</code></pre>
+<pre><code class="bash">git add .</code></pre>
 </li>
 </ul>
 <ul>
-<li><p>提交代码到远程仓库（远端服务器）</p>
-<p>如果你是clone代码到本地修改后，上传：</p>
-<pre><code class="bash">git push origin &lt;分支名&gt;
-</code></pre>
-<p>如果是自己写代码，第一次向远程仓库上传</p>
-<pre><code class="bash">git remote add origin &lt;服务器地址&gt;
-</code></pre>
+<li><p>提交代码到本地库</p>
+<pre><code class="bash">git commit -m &quot;提交信息&quot;</code></pre>
 </li>
+</ul>
+<ul>
+<li>提交代码到远程仓库（远端服务器）</li>
+</ul>
+<p>  如果你是clone代码到本地修改后，上传：</p>
+<pre><code class="bash">git push origin &lt;分支名&gt;</code></pre>
+<p>  如果是自己写代码，第一次向远程仓库上传</p>
+<pre><code class="bash">git remote add origin &lt;服务器地址&gt;</code></pre>
+<ul>
 <li><p>分支</p>
 <pre><code class="bash">// 创建分支_两种方法
 git branch &lt;新分支的名字&gt;
@@ -231,9 +239,10 @@ git checkout &lt;分支名&gt;
 git branch -d &lt;分支名&gt;
 
 // 将分支推送到远程
-git push origin &lt;分支名&gt;
-</code></pre>
+git push origin &lt;分支名&gt;</code></pre>
 </li>
+</ul>
+<ul>
 <li><p>拉取 &amp; 合并</p>
 <pre><code class="bash">// 拉取远程某分支内容
 // 小组中每人每天都在写新内容并上传到远程仓库，所以你需要把它从远程拉取到本地
@@ -247,8 +256,7 @@ git merge &lt;（某）分支名&gt;
 git add .
 
 // 在合并改动之前，你可以使用下行代码预览差异
-git diff &lt;源分支&gt; &lt;目标分支&gt;
-</code></pre>
+git diff &lt;源分支&gt; &lt;目标分支&gt;</code></pre>
 </li>
 </ul>
 <ul>
@@ -259,9 +267,10 @@ git checkout &lt;文件名&gt;
 // 假如你想丢弃你在本地的所有改动与提交
 // 可以到服务器上获取最新的版本历史，并将你本地主分支指向它
 git fetch origin
-git reset --hard origin/master
-</code></pre>
+git reset --hard origin/master</code></pre>
 </li>
+</ul>
+<ul>
 <li><p>其他</p>
 <pre><code class="bash">// 内建的图形化git
 gitk
@@ -274,8 +283,7 @@ git log             //完整记录
 git log --oneline    //简易记录
 
 // 交互式添加文件到暂存区
-git add -i
-</code></pre>
+git add -i</code></pre>
 </li>
 </ul>
 <h2 id="引用和附赠链接"><a href="#引用和附赠链接" class="headerlink" title="引用和附赠链接"></a>引用和附赠链接</h2><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Git"><font size=4 ><strong>参考wikipedia</strong></font></a></p>
@@ -316,7 +324,7 @@ git add -i
             <div class="box animated fadeInRight">
                 <div class="subbox">
                     <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
-                    <p>Xin Shang</p>
+                    <p>John Doe</p>
                     <span>Think like an artist, develop like an artisan</span>
                     <dl>
                         <dd><a href="https://github.com/xin-shang" target="_blank"><span
@@ -329,8 +337,8 @@ git add -i
                 </div>
                 <ul>
                     <li><a href="/">8 <p>Articles</p></a></li>
-                    <li><a href="/categories">2 <p>Categories</p></a></li>
-                    <li><a href="/tags">3 <p>Tags</p></a></li>
+                    <li><a href="/categories">3 <p>Categories</p></a></li>
+                    <li><a href="/tags">5 <p>Tags</p></a></li>
                 </ul>
             </div>
             
@@ -358,9 +366,9 @@ git add -i
 </body>
 <footer>
     <p class="copyright" id="copyright">
-        &copy; 2021
+        &copy; 2023
         <span class="gradient-text">
-            Xin Shang
+            John Doe
         </span>.
         Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
         Theme

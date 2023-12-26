@@ -13,7 +13,7 @@
     <meta name="description" content="Block利器 – Markdown教程（3）前言这次教程 – Markdown的基础语法
 Markdown代码代码片段如果是段落上的一个函数或片段的代码可以用反引号把它包起来（**`**）
 格式：,"> 
-    <meta name="author" content="Xin Shang"> 
+    <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@ Markdown代码代码片段如果是段落上的一个函数或片段的代码可
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body class="loading">
@@ -144,8 +144,7 @@ Markdown代码代码片段如果是段落上的一个函数或片段的代码可
             <h1 id="Block利器-–-Markdown教程（3）"><a href="#Block利器-–-Markdown教程（3）" class="headerlink" title="Block利器 – Markdown教程（3）"></a>Block利器 – Markdown教程（3）</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这次教程 – Markdown的基础语法</p>
 <h2 id="Markdown代码"><a href="#Markdown代码" class="headerlink" title="Markdown代码"></a>Markdown代码</h2><h3 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h3><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（**`**）</p>
 <p>格式：</p>
-<pre><code class="markdown">`printf()`函数
-</code></pre>
+<pre><code class="markdown">`printf()`函数</code></pre>
 <p>显示结果：</p>
 <p><code>printf()</code>函数</p>
 <h3 id="代码区块："><a href="#代码区块：" class="headerlink" title="代码区块："></a>代码区块：</h3><p>用（**```**）来表示代码区块, 并指定一种语言（也可以不指定）</p>
@@ -154,26 +153,20 @@ Markdown代码代码片段如果是段落上的一个函数或片段的代码可
 $(document).ready(function () &#123;
     alert(&#39;RUNOOB&#39;);
 &#125;);
-​```
-</code></pre>
+​```</code></pre>
 <p>显示结果：</p>
 <pre><code class="javascript">$(document).ready(function () &#123;
     alert(&#39;RUNOOB&#39;);
-&#125;);
-</code></pre>
+&#125;);</code></pre>
 <h2 id="Markdown链接"><a href="#Markdown链接" class="headerlink" title="Markdown链接"></a>Markdown链接</h2><h3 id="连接使用方式一"><a href="#连接使用方式一" class="headerlink" title="连接使用方式一"></a>连接使用方式一</h3><p>格式：</p>
-<pre><code class="markdown">[链接名称](链接地址)
-</code></pre>
+<pre><code class="markdown">[链接名称](链接地址)</code></pre>
 <p>显示结果：</p>
-<pre><code class="markdown">这是一个链接 [菜鸟教程](https://www.runoob.com)
-</code></pre>
+<pre><code class="markdown">这是一个链接 [菜鸟教程](https://www.runoob.com)</code></pre>
 <p>这是一个链接 <a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a></p>
 <h3 id="连接使用方式二"><a href="#连接使用方式二" class="headerlink" title="连接使用方式二"></a>连接使用方式二</h3><p>格式：</p>
-<pre><code class="markdown">&lt;链接地址&gt;
-</code></pre>
+<pre><code class="markdown">&lt;链接地址&gt;</code></pre>
 <p>显示结果：</p>
-<pre><code class="markdown">&lt;https://www.runoob.com&gt;
-</code></pre>
+<pre><code class="markdown">&lt;https://www.runoob.com&gt;</code></pre>
 <p><a target="_blank" rel="noopener" href="https://www.runoob.com/">https://www.runoob.com</a></p>
 <h3 id="连接使用方式三（高级链接）"><a href="#连接使用方式三（高级链接）" class="headerlink" title="连接使用方式三（高级链接）"></a>连接使用方式三（高级链接）</h3><p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行。</p>
 <p>格式：</p>
@@ -182,15 +175,13 @@ $(document).ready(function () &#123;
 然后在文档的结尾为变量赋值（网址）
 
   [1]: http://www.google.com/
-  [runoob]: http://www.runoob.com/
-</code></pre>
+  [runoob]: http://www.runoob.com/</code></pre>
 <p>显示结果：</p>
 <p>这个链接用 1 作为网址变量 <a target="_blank" rel="noopener" href="http://www.google.com/">Google</a><br>这个链接用 runoob 作为网址变量 <a target="_blank" rel="noopener" href="http://www.runoob.com/">Runoob</a><br>然后在文档的结尾为变量赋值（网址）</p>
 <h2 id="Markdown图片"><a href="#Markdown图片" class="headerlink" title="Markdown图片"></a>Markdown图片</h2><p>Markdown 图片语法格式如下：</p>
 <pre><code class="markdown">![alt 属性文本](图片地址)
 
-![alt 属性文本](图片地址 &quot;可选标题&quot;)
-</code></pre>
+![alt 属性文本](图片地址 &quot;可选标题&quot;)</code></pre>
 <ul>
 <li>开头一个感叹号 !</li>
 <li>接着一个方括号，里面放上图片的替代文字</li>
@@ -199,8 +190,7 @@ $(document).ready(function () &#123;
 <p>使用实例：</p>
 <pre><code class="markdown">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)
 
-![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)
-</code></pre>
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)</code></pre>
 <p>显示结果：</p>
 <p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
 <p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"></p>
@@ -208,13 +198,11 @@ $(document).ready(function () &#123;
 <pre><code class="markdown">这个链接用 1 作为网址变量 [RUNOOB][1].
 然后在文档的结尾为变量赋值（网址）
 
-[1]: http://static.runoob.com/images/runoob-logo.png
-</code></pre>
+[1]: http://static.runoob.com/images/runoob-logo.png</code></pre>
 <p>显示结果如下：</p>
 <p>这个链接用 1 作为网址变量 <a target="_blank" rel="noopener" href="http://www.google.com/">RUNOOB</a>.<br>然后在文档的结尾为变量赋值（网址）</p>
 <p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
-<pre><code class="markdown">&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;
-</code></pre>
+<pre><code class="markdown">&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;</code></pre>
 <p>显示结果如下：</p>
 <img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
 
@@ -225,8 +213,7 @@ $(document).ready(function () &#123;
 <pre><code class="markdown">|  表头   | 表头  |
 |  ----  | ----  |
 | 单元格  | 单元格 |
-| 单元格  | 单元格 |
-</code></pre>
+| 单元格  | 单元格 |</code></pre>
 <p>显示结果如下：</p>
 <table>
 <thead>
@@ -254,8 +241,7 @@ $(document).ready(function () &#123;
 <pre><code class="markdown">| 左对齐 | 右对齐 | 居中对齐 |
 | :-----| ----: | :----: |
 | 单元格 | 单元格 | 单元格 |
-| 单元格 | 单元格 | 单元格 |
-</code></pre>
+| 单元格 | 单元格 | 单元格 |</code></pre>
 <p>显示结果如下：</p>
 <table>
 <thead>
@@ -311,7 +297,7 @@ $(document).ready(function () &#123;
             <div class="box animated fadeInRight">
                 <div class="subbox">
                     <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
-                    <p>Xin Shang</p>
+                    <p>John Doe</p>
                     <span>Think like an artist, develop like an artisan</span>
                     <dl>
                         <dd><a href="https://github.com/xin-shang" target="_blank"><span
@@ -324,8 +310,8 @@ $(document).ready(function () &#123;
                 </div>
                 <ul>
                     <li><a href="/">8 <p>Articles</p></a></li>
-                    <li><a href="/categories">2 <p>Categories</p></a></li>
-                    <li><a href="/tags">3 <p>Tags</p></a></li>
+                    <li><a href="/categories">3 <p>Categories</p></a></li>
+                    <li><a href="/tags">5 <p>Tags</p></a></li>
                 </ul>
             </div>
             
@@ -353,9 +339,9 @@ $(document).ready(function () &#123;
 </body>
 <footer>
     <p class="copyright" id="copyright">
-        &copy; 2021
+        &copy; 2023
         <span class="gradient-text">
-            Xin Shang
+            John Doe
         </span>.
         Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
         Theme

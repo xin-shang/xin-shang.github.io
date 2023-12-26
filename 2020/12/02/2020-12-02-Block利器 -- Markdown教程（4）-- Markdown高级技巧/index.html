@@ -12,7 +12,7 @@
     <meta name="keywords" content="TriDiamond Obsidian,"> 
     <meta name="description" content="Block利器 – Markdown教程（4）–Markdown 高级技巧支持的 HTML 元素不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。
 目前支持的 HT,"> 
-    <meta name="author" content="Xin Shang"> 
+    <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 
 <body class="loading">
@@ -142,14 +142,12 @@
         <div class="content markdown animated fadeIn">
             <h1 id="Block利器-–-Markdown教程（4）"><a href="#Block利器-–-Markdown教程（4）" class="headerlink" title="Block利器 – Markdown教程（4）"></a>Block利器 – Markdown教程（4）</h1><h2 id="–Markdown-高级技巧"><a href="#–Markdown-高级技巧" class="headerlink" title="–Markdown 高级技巧"></a>–Markdown 高级技巧</h2><h3 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h3><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
 <p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<pre><code class="markdown">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑
-</code></pre>
+<pre><code class="markdown">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</code></pre>
 <p>输出结果为：</p>
 <p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
 <h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
 <pre><code class="markdown">**文本加粗** 
-\*\* 正常显示星号 \*\*
-</code></pre>
+\*\* 正常显示星号 \*\*</code></pre>
 <p>输出结果为：</p>
 <p><strong>文本加粗</strong><br>** 正常显示星号 **</p>
 <p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
@@ -164,8 +162,7 @@ _   下划线
 +   加号
 -   减号
 .   英文句点
-!   感叹号
-</code></pre>
+!   感叹号</code></pre>
 <h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
 <pre><code class="markdown">$$
 \mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 =  \begin&#123;vmatrix&#125; 
@@ -174,8 +171,7 @@ _   下划线
 \frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\
 \end&#123;vmatrix&#125;
 $&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;
-$$
-</code></pre>
+$$</code></pre>
 <p>输出结果为：<br>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}<br>$$</p>
 <h2 id="表格高级应用-写笔记"><a href="#表格高级应用-写笔记" class="headerlink" title="表格高级应用 写笔记"></a>表格高级应用 写笔记</h2><h3 id="typora-画流程图、时序图-顺序图-、甘特图"><a href="#typora-画流程图、时序图-顺序图-、甘特图" class="headerlink" title="typora 画流程图、时序图(顺序图)、甘特图"></a>typora 画流程图、时序图(顺序图)、甘特图</h3><p>复制以下代码使用 typora 的源码模式粘贴到编辑器中查看效果：</p>
 <p>以下几个实例效果图如下：</p>
@@ -187,8 +183,7 @@ A[方形] --&gt;B(圆角)
     C --&gt;|a=1| D[结果1]
     C --&gt;|a=2| E[结果2]
     F[横向流程图]
-```
-</code></pre>
+```</code></pre>
 <p><strong>2、竖向流程图源码格式：</strong></p>
 <pre><code class="markdown">```mermaid
 graph TD
@@ -197,8 +192,7 @@ A[方形] --&gt; B(圆角)
     C --&gt; |a=1| D[结果1]
     C --&gt; |a=2| E[结果2]
     F[竖向流程图]
-```
-</code></pre>
+```</code></pre>
 <p><strong>3、标准流程图源码格式：</strong></p>
 <pre><code class="markdown">```flow
 st=&gt;start: 开始框
@@ -210,8 +204,7 @@ e=&gt;end: 结束框
 st-&gt;op-&gt;cond
 cond(yes)-&gt;io-&gt;e
 cond(no)-&gt;sub1(right)-&gt;op
-```
-</code></pre>
+```</code></pre>
 <p><strong>4、标准流程图源码格式（横向）：</strong></p>
 <pre><code class="markdown">```flow
 st=&gt;start: 开始框
@@ -223,8 +216,7 @@ e=&gt;end: 结束框
 st(right)-&gt;op(right)-&gt;cond
 cond(yes)-&gt;io(bottom)-&gt;e
 cond(no)-&gt;sub1(right)-&gt;op
-```
-</code></pre>
+```</code></pre>
 <p><strong>5、UML时序图源码样例：</strong></p>
 <pre><code class="markdown">```sequence
 对象A-&gt;对象B: 对象B你好吗?（请求）
@@ -232,8 +224,7 @@ Note right of 对象B: 对象B的描述
 Note left of 对象A: 对象A的描述(提示)
 对象B--&gt;对象A: 我很好(响应)
 对象A-&gt;对象B: 你真的好吗？
-```
-</code></pre>
+```</code></pre>
 <p><strong>6、UML时序图源码复杂样例：</strong></p>
 <pre><code class="markdown">```sequence
 Title: 标题：复杂使用
@@ -247,8 +238,7 @@ Note left of 对象A: 对象A的描述(提示)
 Note over 小三,对象B: 我们是朋友
 participant C
 Note right of C: 没人陪我玩
-```
-</code></pre>
+```</code></pre>
 <p><strong>7、UML标准时序图样例：</strong></p>
 <pre><code class="markdown">```mermaid
 %% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头
@@ -263,8 +253,7 @@ Note right of C: 没人陪我玩
     李四--&gt;&gt;张三: 很好!
     王五-&gt;李四: 你怎么样?
     李四--&gt;王五: 很好!
-```
-</code></pre>
+```</code></pre>
 <p><strong>8、甘特图样例：</strong></p>
 <pre><code class="markdown">```mermaid
 %% 语法示例
@@ -286,24 +275,21 @@ Note right of C: 没人陪我玩
         功能测试                              :active, a1, after des3, 3d
         压力测试                               :after a1  , 20h
         测试报告                               : 48h
-```
-</code></pre>
+```</code></pre>
 <h3 id="效果图如下："><a href="#效果图如下：" class="headerlink" title="效果图如下："></a>效果图如下：</h3><p><strong>1、横向流程图源码格式：</strong></p>
 <pre><code class="mermaid">graph LR
 A[方形] --&gt;B(圆角)
     B --&gt; C&#123;条件a&#125;
     C --&gt;|a=1| D[结果1]
     C --&gt;|a=2| E[结果2]
-    F[横向流程图]
-</code></pre>
+    F[横向流程图]</code></pre>
 <p><strong>2、竖向流程图源码格式：</strong></p>
 <pre><code class="mermaid">graph TD
 A[方形] --&gt; B(圆角)
     B --&gt; C&#123;条件a&#125;
     C --&gt; |a=1| D[结果1]
     C --&gt; |a=2| E[结果2]
-    F[竖向流程图]
-</code></pre>
+    F[竖向流程图]</code></pre>
 <p><strong>3、标准流程图源码格式：</strong></p>
 <pre><code class="flow">st=&gt;start: 开始框
 op=&gt;operation: 处理框
@@ -313,8 +299,7 @@ io=&gt;inputoutput: 输入输出框
 e=&gt;end: 结束框
 st-&gt;op-&gt;cond
 cond(yes)-&gt;io-&gt;e
-cond(no)-&gt;sub1(right)-&gt;op
-</code></pre>
+cond(no)-&gt;sub1(right)-&gt;op</code></pre>
 <p><strong>4、标准流程图源码格式（横向）：</strong></p>
 <pre><code class="flow">st=&gt;start: 开始框
 op=&gt;operation: 处理框
@@ -324,16 +309,14 @@ io=&gt;inputoutput: 输入输出框
 e=&gt;end: 结束框
 st(right)-&gt;op(right)-&gt;cond
 cond(yes)-&gt;io(bottom)-&gt;e
-cond(no)-&gt;sub1(right)-&gt;op
-</code></pre>
+cond(no)-&gt;sub1(right)-&gt;op</code></pre>
 <p><strong>5、UML时序图源码样例：</strong></p>
 <pre><code class="sequence">
 对象A-&gt;对象B: 对象B你好吗?（请求）
 Note right of 对象B: 对象B的描述
 Note left of 对象A: 对象A的描述(提示)
 对象B--&gt;对象A: 我很好(响应)
-对象A-&gt;对象B: 你真的好吗？
-</code></pre>
+对象A-&gt;对象B: 你真的好吗？</code></pre>
 <p><strong>6、UML时序图源码复杂样例：</strong></p>
 <pre><code class="sequence">
 Title: 标题：复杂使用
@@ -346,8 +329,7 @@ Note left of 对象A: 对象A的描述(提示)
 对象A-&gt;对象B: 你真的好吗？
 Note over 小三,对象B: 我们是朋友
 participant C
-Note right of C: 没人陪我玩
-</code></pre>
+Note right of C: 没人陪我玩</code></pre>
 <p><strong>7、UML标准时序图样例：</strong></p>
 <pre><code class="mermaid">
 %% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头
@@ -361,8 +343,7 @@ Note right of C: 没人陪我玩
     Note right of 王五: 合理 食物 &lt;br/&gt;看医生...
     李四--&gt;&gt;张三: 很好!
     王五-&gt;李四: 你怎么样?
-    李四--&gt;王五: 很好!
-</code></pre>
+    李四--&gt;王五: 很好!</code></pre>
 <p><strong>8、甘特图样例：</strong></p>
 <pre><code class="mermaid">%% 语法示例
         gantt
@@ -382,8 +363,7 @@ Note right of C: 没人陪我玩
         section 测试
         功能测试                              :active, a1, after des3, 3d
         压力测试                               :after a1  , 20h
-        测试报告                               : 48h
-</code></pre>
+        测试报告                               : 48h</code></pre>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -419,7 +399,7 @@ Note right of C: 没人陪我玩
             <div class="box animated fadeInRight">
                 <div class="subbox">
                     <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
-                    <p>Xin Shang</p>
+                    <p>John Doe</p>
                     <span>Think like an artist, develop like an artisan</span>
                     <dl>
                         <dd><a href="https://github.com/xin-shang" target="_blank"><span
@@ -432,8 +412,8 @@ Note right of C: 没人陪我玩
                 </div>
                 <ul>
                     <li><a href="/">8 <p>Articles</p></a></li>
-                    <li><a href="/categories">2 <p>Categories</p></a></li>
-                    <li><a href="/tags">3 <p>Tags</p></a></li>
+                    <li><a href="/categories">3 <p>Categories</p></a></li>
+                    <li><a href="/tags">5 <p>Tags</p></a></li>
                 </ul>
             </div>
             
@@ -461,9 +441,9 @@ Note right of C: 没人陪我玩
 </body>
 <footer>
     <p class="copyright" id="copyright">
-        &copy; 2021
+        &copy; 2023
         <span class="gradient-text">
-            Xin Shang
+            John Doe
         </span>.
         Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
         Theme
