@@ -99,13 +99,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    452
+                    7.2k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    7 mins.
                 </span>
                 
                 
@@ -141,7 +141,177 @@
         <div class="content markdown animated fadeIn">
             <h1 id="Mac-下载-Apache-（不使用本机自带的-Apache）"><a href="#Mac-下载-Apache-（不使用本机自带的-Apache）" class="headerlink" title="Mac 下载 Apache （不使用本机自带的 Apache）"></a>Mac 下载 Apache （不使用本机自带的 Apache）</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Mac 正常自带 Apache，但是并不是全功能的 Apache。例如 PHP 的配置在自带的 Apache 中就是不支持的。所以最好重新安装一个功能齐全的 Apache。</p>
 <p>本文将使用 brew 安装 Apache HTTP Server。</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2>
+<h2 id="提前"><a href="#提前" class="headerlink" title="提前"></a>提前</h2><p>我们先来了解一下 Mac 本身自带的 Apache 的目录结构：</p>
+<ul>
+<li>配置文件        /etc/apache2/httpd.conf</li>
+<li>站点根目录        /Library/WebServer/Documents/</li>
+<li>日志路径               /var/log/apache2</li>
+</ul>
+<p>但是我们取配置文件中确定一下是不是已经不支持PHP了：</p>
+<pre><code class="shell">xin@xindeMacBook-Pro apache2 % grep &#39;removed&#39; httpd.conf
+#PHP was deprecated in macOS 11 and removed from macOS 12
+xin@xindeMacBook-Pro apache2 % 
+</code></pre>
+<p>所以，如果我们依然要使用 PHP代码的话，我们只能重新安装 Apache。</p>
+<h2 id="安装流程"><a href="#安装流程" class="headerlink" title="安装流程"></a>安装流程</h2><p>使用 homebrew 安装 httpd：</p>
+<pre><code class="shell">brew install httpd 
+</code></pre>
+<p>等待一段时间安装好后最后的提示为：</p>
+<pre><code class="shell">Removing: /Users/xin/Library/Caches/Homebrew/pkg-config_bottle_manifest--0.29.2_3... (11.0KB)
+Pruned 0 symbolic links and 8 directories from /opt/homebrew
+==&gt; Caveats
+==&gt; httpd
+DocumentRoot is /opt/homebrew/var/www.
+
+The default ports have been set in /opt/homebrew/etc/httpd/httpd.conf to 8080 and in
+/opt/homebrew/etc/httpd/extra/httpd-ssl.conf to 8443 so that httpd can run without sudo.
+
+To start httpd now and restart at login:
+  brew services start httpd
+Or, if you don&#39;t want/need a background service you can just run:
+  /opt/homebrew/opt/httpd/bin/httpd -D FOREGROUND
+==&gt; php
+To enable PHP in Apache add the following to httpd.conf and restart Apache:
+    LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so
+
+    &lt;FilesMatch \.php$&gt;
+        SetHandler application/x-httpd-php
+    &lt;/FilesMatch&gt;
+
+Finally, check DirectoryIndex includes index.php
+    DirectoryIndex index.php index.html
+
+The php.ini and php-fpm.ini file can be found in:
+    /opt/homebrew/etc/php/8.3/
+
+To restart php after an upgrade:
+  brew services restart php
+Or, if you don&#39;t want/need a background service you can just run:
+  /opt/homebrew/opt/php/sbin/php-fpm --nodaemonize
+xin@xindeMacBook-Pro ~ % brew services start httpd
+==&gt; Successfully started `httpd` (label: homebrew.mxcl.httpd)
+xin@xindeMacBook-Pro ~ % cd /opt/homebrew/etc/httpd     
+</code></pre>
+<p>如果有提示中的需求，可以按照提示的命令进行配置。</p>
+<p>安装完成之后使用 <code>brew services list</code> 命令查看一下使用 Homebrew 安装并作为服务管理的所有程序的状态：</p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % brew services list
+Name    Status  User File
+httpd   started xin  ~/Library/LaunchAgents/homebrew.mxcl.httpd.plist
+php     started xin  ~/Library/LaunchAgents/homebrew.mxcl.php.plist
+unbound none         
+xin@xindeMacBook-Pro ~ % 
+</code></pre>
+<p>也可以使用 <code>which</code> 和 <code>where</code> 命令检查一下服务器的路径：</p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % which httpd
+/usr/sbin/httpd
+xin@xindeMacBook-Pro ~ % which apachectl
+/usr/sbin/apachectl
+xin@xindeMacBook-Pro ~ % where apachectl
+/opt/homebrew/bin/apachectl
+/usr/sbin/apachectl
+xin@xindeMacBook-Pro ~ % where httpd
+/opt/homebrew/bin/httpd
+/usr/sbin/httpd
+xin@xindeMacBook-Pro ~ % 
+</code></pre>
+<p>小小总结一下，homebrew 安装的 httpd：</p>
+<ul>
+<li>配置文件        /opt/homebrew/etc/httpd/httpd.conf</li>
+<li>站点根目录        /opt/homebrew/var/www</li>
+<li>日志路径               /opt/homebrew/var/log/httpd</li>
+</ul>
+<p>这个时候就下载完了，接下来需要在 Apache 的配置文件中添加 PHP 的配置：</p>
+<p>如果 PHP 未安装，可以使用 Homebrew 安装 PHP：</p>
+<pre><code class="shell">brew install php
+</code></pre>
+<p>找到配置文件：</p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % cd /opt/homebrew/etc/httpd            
+xin@xindeMacBook-Pro httpd % ls
+extra        httpd.conf    magic        mime.types    original
+xin@xindeMacBook-Pro httpd % vim httpd.conf 
+xin@xindeMacBook-Pro httpd % 
+</code></pre>
+<p>接着，确保 Apache 的配置文件中已经启用了 PHP 模块。在 Apache 的配置文件 /usr/local/etc/httpd/httpd.conf 中，检查以下几行是否存在或取消注释（去掉前面的 #）：</p>
+<pre><code class="shell">LoadModule php_module /opt/homebrew/opt/php/lib/httpd/modules/libphp.so
+</code></pre>
+<p>加载了 PHP 模块，使 Apache 能够处理 PHP 文件。</p>
+<p>这行代码的作用是<strong>加载 PHP 模块</strong>到 Apache 服务器中。</p>
+<ul>
+<li>LoadModule 指令告诉 Apache 加载指定的模块。</li>
+<li>php_module 是模块的名称，它使 Apache 能够识别并处理 PHP 文件。</li>
+<li>/opt/homebrew/opt/php/lib/httpd/modules/libphp.so 是 PHP 模块的实际路径，它是通过 Homebrew 安装 PHP 后所在的位置。</li>
+</ul>
+<p>这段配置用于指定如何处理以 <code>.php</code> 为后缀的文件。确保所有 .php 文件都由 PHP 模块处理，而不是直接作为静态文件返回给客户端。</p>
+<pre><code class="shell">&lt;FilesMatch \.php$&gt;
+    SetHandler application/x-httpd-php
+&lt;/FilesMatch&gt;
+</code></pre>
+<p>指定了所有 .php 文件都应该通过 PHP 模块处理。</p>
+<ul>
+<li><p>&lt;FilesMatch .php$&gt;：这一行使用正则表达式匹配所有以 .php 结尾的文件（.php$）。</p>
+</li>
+<li><p>SetHandler application/x-httpd-php：这一行指示 Apache 使用 application/x-httpd-php 处理器来处理这些匹配到的文件，也就是说，所有匹配 <strong>.php</strong> 的文件都将由 PHP 解析器处理。</p>
+</li>
+</ul>
+<p>还需要告诉 Apache 处理 PHP 文件。在 httpd.conf 文件中，添加以下内容（如果还没有）：</p>
+<pre><code class="shell">&lt;IfModule php_module&gt;
+    AddType application/x-httpd-php .php
+&lt;/IfModule&gt;
+</code></pre>
+<p>确保在 PHP <strong>模块</strong>加载时，Apache 会把 .php 文件当作 PHP 文件类型来处理。</p>
+<ul>
+<li><IfModule php_module>：这是一种保护措施，确保仅在 PHP 模块已经被加载时才应用此配置。它的意思是：<strong>“如果 PHP 模块存在，那么执行下面的配置”</strong>。</li>
+<li>AddType application/x-httpd-php .php：这行指令告诉 Apache，任何以 .php 结尾的文件都应该被识别为 application/x-httpd-php 类型，并交由 PHP 模块处理。</li>
+</ul>
+<h2 id="运行尝试"><a href="#运行尝试" class="headerlink" title="运行尝试"></a>运行尝试</h2><p>配置完后就可以尝试启动服器了，以下是一些常用命令：</p>
+<pre><code class="shell"># 启动服务
+sudo apachectl start
+
+# 重启服务
+sudo apachectl stop
+
+# 关闭服务
+sudo apachectl restart
+
+# 关闭开机自动启动
+sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+
+# 开启开机自动启动
+sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+</code></pre>
+<p>或者，手动启动 Apache（不作为服务运行）：</p>
+<pre><code class="shell">httpd -k start
+</code></pre>
+<p><strong>启动：</strong></p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % brew services start httpd
+==&gt; Successfully started `httpd` (label: homebrew.mxcl.httpd)
+xin@xindeMacBook-Pro ~ % 
+</code></pre>
+<p>我这个已经启动了，所以提示 already started。</p>
+<p><strong>重启：</strong></p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % brew services restart httpd
+Stopping `httpd`... (might take a while)
+==&gt; Successfully stopped `httpd` (label: homebrew.mxcl.httpd)
+==&gt; Successfully started `httpd` (label: homebrew.mxcl.httpd)
+xin@xindeMacBook-Pro ~ % 
+</code></pre>
+<p>这个就是重启案例。</p>
+<p>添加一个测试用的 PHP 工程：</p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % cd /opt/homebrew/var/www/        
+xin@xindeMacBook-Pro www % ls
+aaa.php        cgi-bin        index.html
+xin@xindeMacBook-Pro www % vim test.php
+xin@xindeMacBook-Pro www % 
+</code></pre>
+<p><code>test.php</code></p>
+<pre><code class="php">&lt;?php 
+    phpinfo(); 
+?&gt;
+</code></pre>
+<p>创建好后重新启动一下服务器，然后取浏览器中访问：<code>http://localhost:8080/test.php</code> 查看效果：</p>
+<p><img src="http://static.runoob.com/images/%E6%9F%A5%E7%9C%8B%E6%95%88%E6%9E%9C.png" alt="查看效果"></p>
+<p><strong>成功了！</strong></p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -199,7 +369,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mac-%E4%B8%8B%E8%BD%BD-Apache-%EF%BC%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%9C%BA%E8%87%AA%E5%B8%A6%E7%9A%84-Apache%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">Mac 下载 Apache （不使用本机自带的 Apache）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">准备</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mac-%E4%B8%8B%E8%BD%BD-Apache-%EF%BC%88%E4%B8%8D%E4%BD%BF%E7%94%A8%E6%9C%AC%E6%9C%BA%E8%87%AA%E5%B8%A6%E7%9A%84-Apache%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">Mac 下载 Apache （不使用本机自带的 Apache）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E5%89%8D"><span class="toc-number">1.2.</span> <span class="toc-text">提前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">安装流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%B0%9D%E8%AF%95"><span class="toc-number">1.4.</span> <span class="toc-text">运行尝试</span></a></li></ol></li></ol>
                 </div>
             </div>
             
