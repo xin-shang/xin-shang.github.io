@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>实验文章 - Hexo</title>
+    <title>WEB 程序前后端通信测试 一 (HTML JavaScript PHP MySQL) - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="实验文章这篇文章用于测试Hexo能否成功部署完毕"> 
+    <meta name="description" content="WEB 程序前后端通信测试 一前言之前我们已经在本地配置好了 Apache 服务器。这是用来开发 WEB 程序的前期准备。本篇文章将测试前后端的连接测试。
+准备流程开发一份 PHP 的测试代码，名为,"> 
     <meta name="author" content="Xin Shang"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -57,7 +58,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">实验文章</h3>
+        <h3 class="subtitle">WEB 程序前后端通信测试 一 (HTML JavaScript PHP MySQL)</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -87,24 +88,25 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                <a href="/categories/WEB开发"><b>「
+                    </b>WEB开发<b> 」</b></a>
                 
-                June 25, 2021
+                September 16, 2024
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/06/25/%E5%AE%9E%E9%AA%8C%E6%96%87%E7%AB%A0/" title="实验文章" class="">实验文章</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/09/16/WEB%20%E7%A8%8B%E5%BA%8F%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%B5%8B%E8%AF%95%20%E4%B8%80/" title="WEB 程序前后端通信测试 一 (HTML JavaScript PHP MySQL)" class="">WEB 程序前后端通信测试 一 (HTML JavaScript PHP MySQL)</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    332
+                    5.3k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    5 mins.
                 </span>
                 
                 
@@ -116,6 +118,8 @@
                 
             </p>
             
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Apache/" rel="tag">Apache</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/WEB/" rel="tag">WEB</a></li></ul>
             
         </div>
     </div>
@@ -136,7 +140,131 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="实验文章"><a href="#实验文章" class="headerlink" title="实验文章"></a>实验文章</h1><h2 id="这篇文章用于测试Hexo能否成功部署"><a href="#这篇文章用于测试Hexo能否成功部署" class="headerlink" title="这篇文章用于测试Hexo能否成功部署"></a>这篇文章用于测试Hexo能否成功部署</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="完毕"><a href="#完毕" class="headerlink" title="完毕"></a>完毕</h2>
+            <h1 id="WEB-程序前后端通信测试-一"><a href="#WEB-程序前后端通信测试-一" class="headerlink" title="WEB 程序前后端通信测试 一"></a>WEB 程序前后端通信测试 一</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前我们已经在本地配置好了 Apache 服务器。这是用来开发 WEB 程序的前期准备。本篇文章将测试前后端的连接测试。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>开发一份 PHP 的测试代码，名为 <code>aaa.php</code>：</p>
+<pre><code class="php">&lt;?php
+    // 允许跨域请求
+    header(&quot;Access-Control-Allow-Origin: *&quot;);
+    header(&quot;Access-Control-Allow-Methods: GET, POST, OPTIONS&quot;);
+    header(&quot;Access-Control-Allow-Headers: Content-Type&quot;);
+    
+    // 检查请求方法
+    if ($_SERVER[&#39;REQUEST_METHOD&#39;] === &#39;POST&#39;) 
+  &#123;
+        // 处理 POST 请求
+        $data = $_POST[&#39;data&#39;]; // 获取 POST 数据
+        echo &quot;Received POST data: &quot; . htmlspecialchars($data);
+    &#125; 
+    elseif ($_SERVER[&#39;REQUEST_METHOD&#39;] === &#39;GET&#39;) 
+  &#123;
+        // 处理 GET 请求
+        if (isset($_GET[&#39;data&#39;])) &#123;
+            $data = $_GET[&#39;data&#39;]; // 获取 GET 数据
+            echo &quot;Received GET data: &quot; . htmlspecialchars($data);
+        &#125; else &#123;
+            echo &quot;No GET data received&quot;;
+        &#125;
+    &#125; 
+    else 
+  &#123;
+        echo &quot;Unsupported request method&quot;;
+    &#125;
+?&gt;
+</code></pre>
+<p>把它放到 <code>/opt/homebrew/var/www</code> 这个路径中：</p>
+<pre><code class="shell">xin@xindeMacBook-Pro ~ % cd /opt/homebrew/var/www 
+xin@xindeMacBook-Pro www % ls
+aaa.php        cgi-bin        index.html    test.php
+xin@xindeMacBook-Pro www % 
+</code></pre>
+<p>再开发一份HTML和JavaScript的测试网页：</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;PHP AJAX Test&lt;/title&gt;
+&lt;/head&gt;
+  
+&lt;body&gt;
+
+    &lt;h1&gt;Send GET or POST Request to PHP&lt;/h1&gt;
+
+    &lt;!-- 穿过去的数据 --&gt;
+    &lt;input type=&quot;text&quot; id=&quot;dataInput&quot; placeholder=&quot;Enter some text&quot;&gt;
+    &lt;br&gt;&lt;br&gt;
+      
+      &lt;!-- GET --&gt;
+    &lt;button onclick=&quot;sendGetRequest()&quot;&gt;Send GET Request&lt;/button&gt;
+    &lt;!-- POST --&gt;
+    &lt;button onclick=&quot;sendPostRequest()&quot;&gt;Send POST Request&lt;/button&gt;
+
+      &lt;!-- 返还服务器结果 --&gt;
+    &lt;h2&gt;Response from Server:&lt;/h2&gt;
+    &lt;pre id=&quot;response&quot;&gt;&lt;/pre&gt;
+
+  
+    &lt;script&gt;
+                
+        // 发送GET请求（带着‘dataInput’的数据），返还结果到 ‘response’中
+        function sendGetRequest() &#123;
+          const data = document.getElementById(&#39;dataInput&#39;).value;
+          fetch(`http://localhost:8080/aaa.php?data=$&#123;encodeURIComponent(data)&#125;`)
+              .then(response =&gt; response.text())
+              .then(text =&gt; &#123;
+                  document.getElementById(&#39;response&#39;).textContent = text;
+              &#125;)
+              .catch(error =&gt; console.error(&#39;Error with GET request:&#39;, error));
+        &#125;
+
+        // 发送POST请求（带着‘dataInput’的数据），返还结果到 ‘response’中
+        function sendPostRequest() &#123;
+            const data = document.getElementById(&#39;dataInput&#39;).value;
+            fetch(&#39;http://localhost:8080/aaa.php&#39;, &#123;
+                method: &#39;POST&#39;,
+                headers: &#123;
+                    &#39;Content-Type&#39;: &#39;application/x-www-form-urlencoded&#39;,
+                &#125;,
+                body: `data=$&#123;encodeURIComponent(data)&#125;`
+            &#125;)
+            .then(response =&gt; response.text())
+            .then(text =&gt; &#123;
+                document.getElementById(&#39;response&#39;).textContent = text;
+            &#125;)
+            .catch(error =&gt; console.error(&#39;Error with POST request:&#39;, error));
+        &#125;
+    &lt;/script&gt;
+&lt;/body&gt;
+  
+&lt;/html&gt;
+</code></pre>
+<p>用 VS Code （我常用的）打开后运行。</p>
+<p>运行后：</p>
+<p><img src="https://xin-shang.github.io/img/HTML%E8%BF%90%E8%A1%8C.png" alt="HTML运行"></p>
+<p>测试：</p>
+<p><img src="https://xin-shang.github.io/img/%E8%AF%B7%E6%B1%82%E6%B5%8B%E8%AF%95.png" alt="请求测试"></p>
+<p><strong>成功！</strong></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>因为 PHP 需要提前写好循序跨域请求：</p>
+<pre><code class="php">     // 允许跨域请求
+    header(&quot;Access-Control-Allow-Origin: *&quot;);
+    header(&quot;Access-Control-Allow-Methods: GET, POST, OPTIONS&quot;);
+    header(&quot;Access-Control-Allow-Headers: Content-Type&quot;);
+</code></pre>
+<p>所以如果 PHP 文件很多而且有不同服务器都会发来请求的话，重复写这个很麻烦可以直接配置 Apache 服务器，变成全局设置：</p>
+<p>修改 Apache 的 .htaccess 或主配置文件（通常是 httpd.conf）：</p>
+<p>在 .htaccess 或 Apache 配置文件中添加以下内容：</p>
+<pre><code class="shell">&lt;IfModule mod_headers.c&gt;
+    Header set Access-Control-Allow-Origin &quot;*&quot;
+    Header set Access-Control-Allow-Methods &quot;GET, POST, OPTIONS&quot;
+    Header set Access-Control-Allow-Headers &quot;Content-Type&quot;
+&lt;/IfModule&gt;
+</code></pre>
+<p>删除 PHP 中的重复代码。</p>
+<p>重启：</p>
+<pre><code class="shell">brew services restart httpd
+</code></pre>
+<p>然后再试一次。</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -194,7 +322,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E6%96%87%E7%AB%A0"><span class="toc-number">1.</span> <span class="toc-text">实验文章</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E7%94%A8%E4%BA%8E%E6%B5%8B%E8%AF%95Hexo%E8%83%BD%E5%90%A6%E6%88%90%E5%8A%9F%E9%83%A8%E7%BD%B2"><span class="toc-number">1.1.</span> <span class="toc-text">这篇文章用于测试Hexo能否成功部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%AF%95"><span class="toc-number">1.3.</span> <span class="toc-text">完毕</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WEB-%E7%A8%8B%E5%BA%8F%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%B5%8B%E8%AF%95-%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">WEB 程序前后端通信测试 一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-number">1.4.</span> <span class="toc-text">拓展</span></a></li></ol></li></ol>
                 </div>
             </div>
             
