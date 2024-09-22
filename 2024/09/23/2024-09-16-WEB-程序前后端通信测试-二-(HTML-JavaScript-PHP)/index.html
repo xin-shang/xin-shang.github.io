@@ -5,16 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>京都攻略_Day2 - Hexo</title>
+    <title>WEB 程序前后端通信测试 二 (HTML JavaScript PHP) - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="京都攻略 2（制作中）早餐6:30 早餐，别忘记起床了。
-乘车步行
-出宾馆，步行七分钟，约400米，到达车站 - 十三站
-方案一：
-在十三站直接乘坐阪急京都线，乘坐八站至乌丸站。全程约五十四分钟。（,"> 
+    <meta name="description" content="WEB 程序前后端通信测试 二
+前言通过 WEB  程序前后端通信测试 一 我们接通了WEB服务的前端和后端。并用试例代码进行通信尝试已经取得成功了。
+本篇文章将对后端代码进行进一步的开发。主要完成,"> 
     <meta name="author" content="Xin Shang"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -61,7 +59,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://example.com">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">京都攻略_Day2</h3>
+        <h3 class="subtitle">WEB 程序前后端通信测试 二 (HTML JavaScript PHP)</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -91,25 +89,25 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/旅游"><b>「
-                    </b>旅游<b> 」</b></a>
+                <a href="/categories/WEB开发"><b>「
+                    </b>WEB开发<b> 」</b></a>
                 
-                May 28, 2024
+                September 23, 2024
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2024/05/28/%E4%BA%AC%E9%83%BD%E6%94%BB%E7%95%A5_Day2/" title="京都攻略_Day2" class="">京都攻略_Day2</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2024/09/23/2024-09-16-WEB-%E7%A8%8B%E5%BA%8F%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%B5%8B%E8%AF%95-%E4%BA%8C-(HTML-JavaScript-PHP)/" title="WEB 程序前后端通信测试 二 (HTML JavaScript PHP)" class="">WEB 程序前后端通信测试 二 (HTML JavaScript PHP)</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    3.1k
+                    4.5k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    3 mins.
+                    4 mins.
                 </span>
                 
                 
@@ -122,7 +120,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BA%AC%E9%83%BD/" rel="tag">京都</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/HTTP/" rel="tag">HTTP</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/PHP/" rel="tag">PHP</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/WEB/" rel="tag">WEB</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/composer/" rel="tag">composer</a></li></ul>
             
         </div>
     </div>
@@ -143,63 +141,103 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="京都攻略-2（制作中）"><a href="#京都攻略-2（制作中）" class="headerlink" title="京都攻略 2（制作中）"></a>京都攻略 2（制作中）</h1><h2 id="早餐"><a href="#早餐" class="headerlink" title="早餐"></a>早餐</h2><p><strong>6:30</strong> 早餐，别忘记起床了。</p>
-<h2 id="乘车"><a href="#乘车" class="headerlink" title="乘车"></a>乘车</h2><p><strong>步行</strong></p>
-<p>出宾馆，步行七分钟，约400米，到达车站 - 十三站</p>
-<p><strong>方案一：</strong></p>
-<p>在十三站直接乘坐<strong>阪急京都线</strong>，乘坐八站至<strong>乌丸站</strong>。全程约五十四分钟。（几分钟一班）</p>
+            <h1 id="WEB-程序前后端通信测试-二"><a href="#WEB-程序前后端通信测试-二" class="headerlink" title="WEB 程序前后端通信测试 二"></a>WEB 程序前后端通信测试 二</h1><hr>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>通过 <strong>WEB  程序前后端通信测试 一</strong> 我们接通了WEB服务的前端和后端。并用试例代码进行通信尝试已经取得成功了。</p>
+<p>本篇文章将对后端代码进行进一步的开发。主要完成以下功能：</p>
 <ul>
-<li>因为今天浏览的景点在乌丸站北部一公里处。</li>
+<li>后端文件架构</li>
+<li>请求模块</li>
+<li>路由模块</li>
+<li>控制器模块（暂时不写详细方法，只用测试数据就行）</li>
+<li>测试通过WEB端按钮点击切换不同的控制器数据</li>
 </ul>
-<p><strong>方案二：</strong></p>
-<p>在<strong>十三站西口</strong>进入乘坐<strong>阪急宝冢线</strong>前往<strong>大阪梅田</strong>，全程五分钟（两站）。</p>
-<p>从<strong>大阪梅田</strong>步行至<strong>大阪站</strong>，全程五分钟，需要出站后在进站。</p>
-<p>从<strong>大阪站</strong>坐<strong>东海道，山阳本线（京都方面）</strong>到<strong>京都站</strong>。途径三站共需二十九分钟。</p>
-<p>到达京都站后，坐公交车到达<strong>二条城</strong>。</p>
-<h2 id="开玩"><a href="#开玩" class="headerlink" title="开玩"></a>开玩</h2><p>如果采用方案一（到乌丸站）：</p>
+<hr>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>完成 <strong>WEB 程序前后端通信测试 一</strong></p>
+<hr>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><h3 id="PHP-文件架构"><a href="#PHP-文件架构" class="headerlink" title="PHP 文件架构"></a>PHP 文件架构</h3><p>首先对后端架构进行整体设计，以下是<strong>项目文件结构</strong>：</p>
+<pre><code class="shell">project/
+├── public/                    // 公共访问目录，入口文件
+│   └── index.php
+├── app/                       // 应用核心代码
+│   ├── controllers/           // 控制器
+│   │   └── UserController.php
+│   ├── models/                // 数据模型
+│   │   └── User.php
+│   ├── core/                  // 核心类
+│   │   ├── Router.php         // 路由类
+│   │   ├── Request.php        // 请求类
+│   │   ├── Response.php       // 响应类
+│   │   ├── Controller.php     // 基础控制器
+│   │   └── Model.php          // 基础模型
+│   └── routes.php             // 路由定义文件
+├── config/                    // 配置文件
+│   └── config.php
+├── vendor/                    // 第三方库（可选，用于自动加载）
+│   └── autoload.php
+├── logs/                      // 日志文件
+├── tests/                     // 测试代码
+└── composer.json              // Composer 配置文件（可选）
+</code></pre>
+<p><strong>说明：</strong></p>
 <ul>
-<li><p>可以出大宫站后，向东步行四分钟（270米）到<strong>四条堀川</strong> 坐 <strong>50，9 公交车</strong>四分钟（四站）到<strong>二条城前</strong>下车。</p>
+<li>public/：存放入口文件 index.php，所有请求都将通过此文件。</li>
+<li>app/：核心应用程序代码。</li>
+<li>controllers/：控制器，处理请求并返回响应。</li>
+<li>models/：数据模型，处理数据库交互和业务逻辑。</li>
+<li>core/：核心类，包括路由、请求、响应、基础控制器和模型等。</li>
+<li>routes.php：定义应用的路由规则。</li>
+<li>config/：配置文件，如数据库连接信息等。</li>
+<li>vendor/：使用 Composer 自动加载类（即使不使用第三方库，也建议使用 Composer 来管理自动加载）。</li>
+<li>logs/：存放日志文件。</li>
+<li>tests/：测试代码，确保代码质量。</li>
+<li>composer.json：Composer 配置文件，用于管理依赖和自动加载。</li>
+</ul>
+<h3 id="程序架构"><a href="#程序架构" class="headerlink" title="程序架构"></a>程序架构</h3><p>采用简化的 MVC（模型-视图-控制器）架构，实现代码的模块化和可维护性。</p>
+<ul>
+<li><p><strong>路由器（Router）</strong>：解析请求的 URL 和方法，分发到相应的控制器和方法。</p>
 </li>
-<li><p>可以出大宫站后，北上步行至<strong>二条城</strong>，全程约十八分钟（1.3公里），中间会经过众多小寺庙，可以在门前院外观赏。</p>
+<li><p><strong>控制器（Controller）</strong>：处理请求，调用模型获取数据，返回响应。</p>
+</li>
+<li><p><strong>模型（Model）</strong>：与数据库交互，处理业务逻辑。</p>
+</li>
+<li><p><strong>请求和响应（Request &amp; Response）</strong>：封装 HTTP 请求和响应，方便数据的获取和返回。</p>
 </li>
 </ul>
-<h4 id="元离宫二条城-amp-二条公园"><a href="#元离宫二条城-amp-二条公园" class="headerlink" title="元离宫二条城 &amp; 二条公园"></a>元离宫二条城 &amp; 二条公园</h4><p>步行至<strong>堀川丸太町</strong>公车 <strong>204</strong> 或 <strong>八条口 202</strong>，两站四分钟（两站），抵达<strong>乌丸丸太町</strong> - <strong>京都御所</strong>。</p>
-<h4 id="京都御所"><a href="#京都御所" class="headerlink" title="京都御所"></a>京都御所</h4><p>东北方向步行至<strong>鸭川公园</strong>。</p>
-<h4 id="鸭川公园"><a href="#鸭川公园" class="headerlink" title="鸭川公园"></a>鸭川公园</h4><p>去<strong>北白川天神宫</strong>大概三十分钟， 公交</p>
-<p><strong>哲学之道</strong></p>
-<p>去<strong>平安宫</strong>大概十六分钟。</p>
-<p><strong>如果有时间可以去昨天没去的景点看看。</strong></p>
-<h2 id="预备景点"><a href="#预备景点" class="headerlink" title="预备景点"></a>预备景点</h2><h4 id="昨天大雨，没去-清水寺-amp-伏见稻荷大社"><a href="#昨天大雨，没去-清水寺-amp-伏见稻荷大社" class="headerlink" title="昨天大雨，没去 清水寺 &amp; 伏见稻荷大社"></a>昨天大雨，没去 <strong>清水寺</strong> &amp; <strong>伏见稻荷大社</strong></h4><p><strong>元离宫二条城 &amp; 二条公园</strong></p>
-<p>8:45 - 16:00    公园 24小时</p>
-<p>二条城，作为昔日幕府将军的居所，闪耀着历史的光辉。这座城堡以其华丽的屏风画和精致的雕刻而闻名，是日本文化遗产的瑰宝。周围的二条公园则是赏花和秋叶的理想之地，四季更替带来不同的风景和情调。</p>
-<hr>
-<p><strong>京都御所</strong></p>
-<p>9:00 - 16:20</p>
-<p>京都御所是皇室历史的见证，曾是日本天皇的宫殿。这里的建筑和庭院体现了日本的传统美学和精致的皇室文化，游客可以在导游的讲解下了解皇室的历史和文化。</p>
-<hr>
-<p><strong>鸭川公园</strong></p>
-<p>24小时</p>
-<p>鸭川是京都市民的休闲去处，河畔的公园常年绿树成荫，是散步和野餐的好地方。春天时，樱花沿河盛开，营造出一片浪漫的氛围。</p>
-<hr>
-<p><strong>北白川天神宫</strong></p>
-<p>好像不营业。。。</p>
-<p>北白川天神宫是一座祭祀学问之神的神社，尤其在学生中非常受欢迎，他们来这里祈求学业成功。这里的环境宁静，四周被郁郁葱葱的自然环境所包围，适合静思或简单的放松。</p>
-<hr>
-<p><strong>银阁寺</strong></p>
-<p>不知道</p>
-<p>银阁寺，正式名称为慈照寺，是室町时代的禅宗寺院。虽然其名称含“银”但寺院并未覆银，其简洁朴素的美学和精心维护的枯山水庭院，反映了“侘寂”美学。</p>
-<hr>
-<p><strong>哲学之道</strong></p>
-<p>24小时<br>哲学之道是一条沿着小溪蜿蜒的步行小径，两旁种满了樱花树。春天，这里成为赏樱的热门地点。步行在这条道上，可以体会到哲学的宁静和思考的深度。</p>
-<hr>
-<p><strong>平安神宫</strong></p>
-<p>6:00 - 18:00</p>
-<p>平安神宫的建筑风格复制了平安时代的宫殿，是一处展现日本古代建筑之美的地方。这里的红色大鸟居和宽阔的庭院常常成为节庆活动的中心，尤其是樱花和红叶季节。</p>
-<hr>
-<p><strong>京都市京セラ美术馆</strong></p>
-<p>10:00 - 18:00</p>
-<p>这座现代艺术馆不仅展示了从传统到现代的各种艺术作品，还是探索日本当代艺术发展的窗口。美术馆的建筑本身就是一件艺术品，为艺术爱好者提供了一个思考和欣赏的空间。</p>
-
+<h3 id="运行逻辑和整体流程"><a href="#运行逻辑和整体流程" class="headerlink" title="运行逻辑和整体流程"></a>运行逻辑和整体流程</h3><p><strong>请求流程</strong></p>
+<ol>
+<li><strong>客户端请求</strong>：前端（Web、移动端等）向后端 API 发起 HTTP 请求，例如 GET /api/users/1。</li>
+<li><strong>入口文件</strong>：请求到达 public/index.php，作为应用的唯一入口。</li>
+<li><strong>自动加载</strong>：使用 Composer 的自动加载功能，引入所需的类。</li>
+<li><strong>初始化路由器</strong>：Router 类解析请求的路径和方法。</li>
+<li><strong>路由分发</strong>：根据路由规则，路由器调用对应的控制器方法。</li>
+<li><strong>控制器处理</strong>：控制器接收请求，调用模型获取或操作数据。</li>
+<li><strong>模型交互</strong>：模型与数据库交互，执行相应的查询或操作。</li>
+<li><strong>响应返回</strong>：控制器将数据封装为 JSON 格式，使用 Response 类返回给客户端。</li>
+</ol>
+<h3 id="请求类型示例"><a href="#请求类型示例" class="headerlink" title="请求类型示例"></a>请求类型示例</h3><ul>
+<li><strong>浏览数据（GET）</strong>：GET /api/users，获取用户列表。</li>
+<li><strong>获取单个数据（GET）</strong>：GET /api/users/{id}，获取指定用户信息。</li>
+<li><strong>添加数据（POST）</strong>：POST /api/users，创建新用户。</li>
+<li><strong>更新数据（PUT）</strong>：PUT /api/users/{id}，更新指定用户信息。</li>
+<li><strong>删除数据（DELETE）</strong>：DELETE /api/users/{id}，删除指定用户。</li>
+</ul>
+<h3 id="代码规范和最佳实践"><a href="#代码规范和最佳实践" class="headerlink" title="代码规范和最佳实践"></a>代码规范和最佳实践</h3><ul>
+<li><strong>遵循 PSR 标准</strong>：遵循 PHP-FIG 的 PSR-1 和 PSR-12 编码标准，保持代码风格一致。</li>
+<li><strong>自动加载</strong>：使用 Composer 的 PSR-4 自动加载规范，方便类的加载和管理。</li>
+<li><strong>命名空间</strong>：使用命名空间组织代码，与文件结构保持一致。</li>
+<li><strong>错误处理</strong>：统一的错误和异常处理，返回有意义的 HTTP 状态码和错误信息。</li>
+<li><strong>安全性</strong>：防范 SQL 注入、XSS 等常见安全问题，使用预处理语句和适当的输入验证。</li>
+<li><strong>配置管理</strong>：将可变的配置项（如数据库连接信息）放在配置文件中，方便管理和维护。</li>
+</ul>
+<h3 id="留出可扩展空间"><a href="#留出可扩展空间" class="headerlink" title="留出可扩展空间"></a>留出可扩展空间</h3><ul>
+<li><strong>模块化设计</strong>：代码按照功能模块组织，方便未来添加新功能或模块。</li>
+<li><strong>中间件支持</strong>：设计路由器时考虑中间件机制，方便添加认证、日志等功能。</li>
+<li><strong>环境配置</strong>：支持多环境配置（开发、测试、生产），方便应用部署和维护。</li>
+<li><strong>日志记录</strong>：完善的日志机制，方便调试和错误追踪。</li>
+<li><strong>单元测试</strong>：编写测试代码，确保代码质量和稳定性。</li>
+</ul>
+<h2 id="工程"><a href="#工程" class="headerlink" title="工程"></a>工程</h2><hr>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -257,7 +295,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%AC%E9%83%BD%E6%94%BB%E7%95%A5-2%EF%BC%88%E5%88%B6%E4%BD%9C%E4%B8%AD%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">京都攻略 2（制作中）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A9%E9%A4%90"><span class="toc-number">1.1.</span> <span class="toc-text">早餐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%98%E8%BD%A6"><span class="toc-number">1.2.</span> <span class="toc-text">乘车</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E7%8E%A9"><span class="toc-number">1.3.</span> <span class="toc-text">开玩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%A4%87%E6%99%AF%E7%82%B9"><span class="toc-number">1.4.</span> <span class="toc-text">预备景点</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#WEB-%E7%A8%8B%E5%BA%8F%E5%89%8D%E5%90%8E%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%B5%8B%E8%AF%95-%E4%BA%8C"><span class="toc-number">1.</span> <span class="toc-text">WEB 程序前后端通信测试 二</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP-%E6%96%87%E4%BB%B6%E6%9E%B6%E6%9E%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">PHP 文件架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E6%9E%B6%E6%9E%84"><span class="toc-number">1.3.2.</span> <span class="toc-text">程序架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91%E5%92%8C%E6%95%B4%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.3.</span> <span class="toc-text">运行逻辑和整体流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.3.4.</span> <span class="toc-text">请求类型示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-number">1.3.5.</span> <span class="toc-text">代码规范和最佳实践</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%95%99%E5%87%BA%E5%8F%AF%E6%89%A9%E5%B1%95%E7%A9%BA%E9%97%B4"><span class="toc-number">1.3.6.</span> <span class="toc-text">留出可扩展空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.4.</span> <span class="toc-text">工程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-number">1.5.</span> <span class="toc-text">拓展</span></a></li></ol></li></ol>
                 </div>
             </div>
             
